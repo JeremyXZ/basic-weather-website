@@ -15,8 +15,7 @@ weatherForm.addEventListener('submit', (e) => {
   fetch('/weather?address=' + location).then((response) => {
     response.json().then((data) => {
       if (data.error) {
-        message1.textContent =
-          'Please enter a valid search term and try again!';
+        message1.textContent = data.error;
       } else {
         message1.textContent = location;
         message2.textContent = data.condition;
