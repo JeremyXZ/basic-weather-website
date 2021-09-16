@@ -1,8 +1,11 @@
 const request = require('request');
+const api_key = process.env.WS_API_KEY;
 
 const forecast = (address, callback) => {
   const url =
-    `http://api.weatherstack.com/current?access_key=${process.env.WS_API_KEY}&query=;` +
+    'http://api.weatherstack.com/current?access_key=' +
+    api_key +
+    '&query=' +
     address;
 
   // use empty {} as default variable to avoid error during object destructuring
