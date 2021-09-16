@@ -13,7 +13,7 @@ const forecast = (address, callback) => {
     if (error) {
       callback('unable to connect forecast service', undefined);
     } else if (body.error) {
-      callback('unable to find location', undefined);
+      callback('Unable to find the location, please enter again!', undefined);
     } else {
       callback(undefined, {
         condition: body.current.weather_descriptions[0],
