@@ -1,4 +1,6 @@
 const request = require('request');
+const dotenv = require('dotenv');
+dotenv.config();
 const api_key = process.env.WS_API_KEY;
 
 const forecast = (address, callback) => {
