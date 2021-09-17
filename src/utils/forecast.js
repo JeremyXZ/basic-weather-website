@@ -21,6 +21,7 @@ const forecast = (address, callback) => {
         condition: body.current.weather_descriptions[0],
         temperature: body.current.temperature,
         windspeed: body.current.wind_speed,
+        humidity: body.current.humidity,
       });
     }
   });

@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
       } else {
         message1.textContent = location;
         message2.textContent = data.condition;
-        message3.innerHTML = data.temperature + ' &#8451;';
+        message3.innerHTML = `The temperature is ${data.temperature}  &#8451; and the humidity is ${data.humidity}%.`;
         search.value = ''; //remove the previous value on the search form
       }
     });
